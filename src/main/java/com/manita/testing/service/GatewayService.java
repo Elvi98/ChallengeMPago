@@ -54,7 +54,7 @@ public class GatewayService {
                 .setPending("https://elvita.herokuapp.com/order")
                 .setSuccess("https://elvita.herokuapp.com/order");
 
-        preference.setNotificationUrl("https://elvita.herokuapp.com/api/notifications")
+        preference.setNotificationUrl("https://elvita.herokuapp.com/api/notifications");
 
         preference.setExternalReference("elvia.arteaga98@gmail.com");
         return preference.save().getInitPoint();
