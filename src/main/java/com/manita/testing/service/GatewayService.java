@@ -19,12 +19,12 @@ public class GatewayService {
         Item item = new Item();
 
         PaymentMethods paymentMethods = new PaymentMethods();
-        item.setTitle("Pringles")
-                .setDescription("Papitas sabor a pizza.")
-                .setPictureUrl("https://www.google.com/imgres?imgurl=http%3A%2F%2Fimages.kglobalservices.com%2Fwww.pringles.com_es%2Fes_es%2Fproduct%2Fproduct_8491992%2Fprod_img-8510902_pizza-165-gr.png&imgrefurl=https%3A%2F%2Fwww.pringles.com%2Fes%2Fproducts%2FSabores%2Fpringles-pizza-165g.html&tbnid=X0tzmaB54Vhs8M&vet=12ahUKEwiM-obhmPLuAhUpBLkGHUg3DqQQMygBegUIARDIAQ..i&docid=7YKxB9SSB5WOgM&w=300&h=819&q=pringles%20pizza&ved=2ahUKEwiM-obhmPLuAhUpBLkGHUg3DqQQMygBegUIARDIAQ")
+        item.setTitle("Huawei P30 Lite")
+                .setDescription("256GB ROM y 6GB RAM")
+                .setPictureUrl("https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p30-lite-new-adition/images/kv-phones-mob.png")
                 .setId("1234")
                 .setQuantity(1)
-                .setUnitPrice((float) 19.00);
+                .setUnitPrice((float) 499.00);
 
         preference.appendItem(item);
 
@@ -32,7 +32,7 @@ public class GatewayService {
 
         Payer payer = new Payer();
 
-        payer.setName("Lalo Landa")
+        payer.setName("Lalo").setSurname("Landa")
                 .setIdentification(new Identification().setType("DNI").setNumber("22334445"))
                 .setEmail("test_user_46542185@testuser.com")
                 .setPhone(new Phone().setAreaCode("52").setNumber("5549737300"))
@@ -53,6 +53,10 @@ public class GatewayService {
         backUrls.setFailure("https://elvita.herokuapp.com/order")
                 .setPending("https://elvita.herokuapp.com/order")
                 .setSuccess("https://elvita.herokuapp.com/order");
+
+        preference.setBackUrls(backUrls);
+
+        preference.setAutoReturn(Preference.AutoReturn.approved);
 
         preference.setNotificationUrl("https://elvita.herokuapp.com/api/notifications");
 
