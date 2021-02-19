@@ -50,9 +50,11 @@ public class GatewayService {
 
         // Crea back urls en la preferencia
         BackUrls backUrls = new BackUrls();
-        backUrls.setFailure("http://google.com")
-                .setPending("https://google.com")
-                .setSuccess("https://google.com");
+        backUrls.setFailure("https://elvita.herokuapp.com/order")
+                .setPending("https://elvita.herokuapp.com/order")
+                .setSuccess("https://elvita.herokuapp.com/order");
+
+        preference.setNotificationUrl("https://elvita.herokuapp.com/api/notifications")
 
         preference.setExternalReference("elvia.arteaga98@gmail.com");
         return preference.save().getInitPoint();
