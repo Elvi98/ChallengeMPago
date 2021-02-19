@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
+@CrossOrigin(origins = "**")
 @RequestMapping("api")
 public class GatewayController {
     private final GatewayService gatewayService;
 
-    @CrossOrigin("**")
     @PostMapping("gateways")
     public String generarPreferencia() throws MPException {
         return gatewayService.generarPreferencia();
