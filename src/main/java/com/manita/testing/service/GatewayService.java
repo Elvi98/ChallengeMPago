@@ -36,7 +36,7 @@ public class GatewayService {
                 .setIdentification(new Identification().setType("DNI").setNumber("22334445"))
                 .setEmail("test_user_46542185@testuser.com")
                 .setPhone(new Phone().setAreaCode("52").setNumber("5549737300"))
-                .setAddress(new Address().setStreetName("Insurgente Sur").setStreetNumber(1602).setZipCode("03940");
+                .setAddress(new Address().setStreetName("Insurgente Sur").setStreetNumber(1602).setZipCode("03940"));
 
         preference.setPayer(payer);
 
