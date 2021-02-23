@@ -20,7 +20,7 @@ public class GatewayService {
 
         PaymentMethods paymentMethods = new PaymentMethods();
         item.setTitle("Huawei P30 Lite")
-                .setDescription("256GB ROM y 6GB RAM")
+                .setDescription("Dispositivo móvil de tienda e-commerce")
                 .setPictureUrl("https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p30-lite-new-adition/images/kv-phones-mob.png")
                 .setId("1234")
                 .setQuantity(1)
@@ -36,7 +36,7 @@ public class GatewayService {
                 .setIdentification(new Identification().setType("DNI").setNumber("22334445"))
                 .setEmail("test_user_46542185@testuser.com")
                 .setPhone(new Phone().setAreaCode("52").setNumber("5549737300"))
-                .setAddress(new Address().setStreetName("Insurgente Sur").setStreetNumber(1602).setZipCode("03940"));
+                .setAddress(new Address().setStreetName("Insurgente Sur").setStreetNumber(1602).setZipCode("03940");
 
         preference.setPayer(payer);
 
@@ -60,7 +60,7 @@ public class GatewayService {
 
         preference.setNotificationUrl("https://elvita.herokuapp.com/api/notifications");
 
-        preference.setExternalReference("elvia.arteaga98@gmail.com");
+        preference.setExternalReference("elvia.arteaga98@hotmail.com");
         return preference.save().getInitPoint();
     }
 }
